@@ -26,7 +26,8 @@ async function getQuote() {
     const url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
     const proxy = "https://cors-anywhere.herokuapp.com/";
     try {
-        const response = await fetch(url);
+        const response = await fetch(proxy + url);
+        // const data = await response.json();
         const data = await response.json();
         // console.log(data);
         // console.log(data.quoteText)
